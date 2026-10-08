@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123f4a">
+<meta name="description" content="Belajar mandiri Pendidikan Pancasila Kelas XI: dinamika pemberlakuan konstitusi Indonesia.">
+<title>Jejak Konstitusi Indonesia | Pendidikan Pancasila XI — Google Sheets</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#18333a;background:#edf3f4;font-synthesis:none;scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.52;cursor:not-allowed}button:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #4ba69a;outline-offset:3px}button:hover:not(:disabled){filter:brightness(.96)}.hidden{display:none!important}
+:root{--ink:#17343c;--muted:#5f7880;--accent:#16665d;--dark:#123c47;--line:#d7e4e5;--white:#fff;--pale:#f3f8f8;--gold:#e9bc67}
+.container{max-width:1080px;margin:0 auto;width:100%;padding:0 19px}.topbar{background:#123b46;color:#fff}.topbar-inner{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:15px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:13px;letter-spacing:.04em}.brand-mark{display:grid;place-items:center;border-radius:11px;background:#ffffff1e;width:40px;height:40px;font-size:24px}.topbar small{color:#d8ecea}.topbar .outline{border:1px solid #ffffff66;color:#fff;background:transparent}.outline,.ghost,.primary{padding:11px 16px;border-radius:11px;font-weight:750;line-height:1.2}.primary{border:1px solid var(--accent);background:var(--accent);color:white}.outline{border:1px solid #b8ced0;background:white;color:#21464d}.ghost{border:0;background:transparent;color:#17665f}.small-btn{font-size:12px;padding:9px 12px}.muted{color:var(--muted)}.eyebrow{color:#16766b;font-weight:850;letter-spacing:.13em;font-size:12px;text-transform:uppercase}.page{padding:29px 0 48px}.card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:clamp(19px,3vw,28px);box-shadow:0 12px 35px #19384008}.card h2{font-size:clamp(23px,2.8vw,33px);letter-spacing:-.035em;margin:7px 0 9px}.card h3{margin:0 0 12px}.hero{display:grid;grid-template-columns:1.06fr .94fr;gap:22px;align-items:stretch}.intro-card{background:linear-gradient(133deg,#123d48,#206d69);color:white;border:none;min-height:340px;display:flex;flex-direction:column;justify-content:center}.intro-card .eyebrow{color:#c6e8df}.intro-card h1{font-size:clamp(34px,4.5vw,54px);letter-spacing:-.055em;line-height:1.07;margin:12px 0}.intro-card p{color:#e1eeeb;max-width:520px;line-height:1.65}.form-card{box-shadow:none}label{display:block;font-size:14px;font-weight:700;margin-bottom:9px}.field{margin-bottom:20px}select,textarea{width:100%;border:1px solid #cbdadc;border-radius:11px;padding:13px 12px;color:var(--ink);background:#fcfefe}select{min-height:50px}.hint,.note{font-size:12px;color:var(--muted);line-height:1.6}.note{background:#eef6f4;padding:11px 13px;border-radius:11px}.warn{border:1px solid #e3cd92;background:#fff8e4;padding:12px 14px;border-radius:12px;color:#72551f;line-height:1.55;font-size:13px}.error{color:#a32f34;font-size:13px;font-weight:650}.btn-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}.btn-row button{min-height:43px}.full{width:100%;min-height:48px}.section-heading{margin:0 0 18px}.section-heading h1{font-size:clamp(27px,3.6vw,42px);line-height:1.16;letter-spacing:-.04em;margin:9px 0}.section-heading p{color:var(--muted);line-height:1.6;margin:0}.metadata{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 21px}.chip{border:1px solid #cee0df;border-radius:999px;font-weight:600;font-size:12px;padding:7px 11px;background:#fff}.progress-track{height:12px;border-radius:30px;background:#dce8e7;overflow:hidden}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#1c7069,#2fa88b);border-radius:30px;transition:width .25s}.progress-label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin:12px 0 8px;gap:12px}.dashboard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:18px}.stage-tile{display:flex;text-align:left;gap:13px;align-items:center;padding:18px;background:white;border:1px solid #d9e6e5;border-radius:15px;color:var(--ink);width:100%;min-height:89px}.stage-tile b{display:block;font-size:15px;margin-bottom:3px}.stage-tile small{display:block;color:var(--muted);line-height:1.35}.step-num{background:#eaf5f1;color:#1a7167;font-weight:900;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex-shrink:0}.stage-tile.is-done{border-color:#9fcfbe;background:#f5fcf8}.stage-tile.is-locked{opacity:.65}.stage-tile .status{margin-left:auto;font-size:11px;color:#5f7b78;white-space:nowrap}.stage-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:19px;align-items:start}.sidebar{position:sticky;top:18px}.sidebar h3{font-size:14px;margin:0 0 15px}.side-link{display:flex;gap:10px;width:100%;align-items:center;text-align:left;background:white;border:1px solid var(--line);padding:12px;border-radius:11px;margin-bottom:9px;color:var(--ink);font-weight:650;font-size:13px}.side-link .mini{display:grid;place-items:center;width:29px;height:29px;border-radius:8px;background:#e9f3f1;color:#156e61;flex-shrink:0}.side-link.active{background:#e5f3ef;border-color:#8dbeb1}.side-link:disabled{opacity:.48}.content-card{min-height:460px}.content-card h2{margin:9px 0 13px}.content-card p,.content-card li{line-height:1.74}.content-card p{margin:9px 0 16px}.pill{display:inline-flex;border-radius:999px;background:#e8f4ef;color:#176c5f;padding:7px 12px;font-weight:850;font-size:11px;letter-spacing:.04em}.callout{border-left:4px solid #277e72;background:#eef7f3;padding:14px 17px;border-radius:0 12px 12px 0;margin:18px 0;line-height:1.7}.task{border:1px solid #d5e6e2;background:#f7fbf9;padding:18px;border-radius:14px;margin:18px 0}.task h3{margin:0 0 9px;font-size:17px}.task textarea{resize:vertical;min-height:132px}.tiny-counter{font-size:12px;color:var(--muted);text-align:right;margin-top:6px}.timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:20px 0}.timeline button{min-height:73px;border-radius:12px;border:1px solid #d5e5e2;background:#f4f8f7;color:#1a5251;padding:10px 6px;font-size:11px;font-weight:800}.timeline button.active{background:#17695f;color:white;border-color:#17695f}.timeline button span{display:block;margin:6px 0 0;font-size:11px;font-weight:550}.period-sheet{background:#f6f9f8;border:1px solid #dce9e6;border-radius:15px;padding:20px}.period-sheet h3{font-size:22px;margin:5px 0 15px}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{background:#fff;border:1px solid #dfe9e8;padding:13px;border-radius:10px}.fact small{display:block;color:var(--muted);font-size:11px;margin-bottom:4px}.fact b{font-size:14px}.panel-line{height:1px;background:#d9e8e4;margin:15px 0}.visit-line{font-size:12px;color:#397a70;margin-top:12px;font-weight:700}.quiz-item{border:1px solid #d9e5e3;border-radius:15px;padding:18px;margin:16px 0}.quiz-item .question{font-weight:800;line-height:1.62}.quiz-item .option{display:flex;gap:10px;align-items:flex-start;background:#f8faf9;border:1px solid #e0eaea;padding:13px;border-radius:10px;margin:8px 0;cursor:pointer;font-weight:500;font-size:14px;line-height:1.5}.quiz-item .option:has(input:checked){background:#edf7f3;border-color:#87bbac}.option input{margin:4px 0 0;flex-shrink:0}.feedback{margin-top:12px;border-radius:10px;background:#f0f6f5;padding:12px;color:#315d58;font-size:13px;line-height:1.6}.score{font-size:36px;font-weight:900;letter-spacing:-.04em;color:#165f58}.footer-note{padding:0 0 30px;text-align:center;font-size:12px;color:#73888b}.report{background:#ecf7f2;border-radius:16px;padding:23px;border:1px solid #bbded0}.report h3{font-size:23px}.report-stat{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:16px 0}.report-stat div{background:white;padding:13px;border-radius:11px}.report-stat b{display:block;font-size:21px;color:#17685d}.report-stat small{font-size:12px;color:#65817b}.help-links a{color:#17695f;word-break:break-word}.banner{padding:12px 15px;background:#fff6df;border:1px solid #ebd498;color:#76591b;border-radius:12px;margin:15px 0;font-size:13px;line-height:1.6}.list-plain{padding-left:22px}.list-plain li{padding-left:4px;margin:7px 0}
+@media(max-width:830px){.hero{grid-template-columns:1fr}.intro-card{min-height:235px}.stage-layout{grid-template-columns:1fr}.sidebar{position:static;display:flex;gap:7px;overflow-x:auto;padding-bottom:6px}.sidebar h3{display:none}.side-link{width:180px;min-width:180px;margin-bottom:0}.topbar-inner{min-height:61px}.dashboard-grid{gap:9px}}
+@media(max-width:540px){.brand{font-size:11px}.brand-mark{width:34px;height:34px}.topbar small{display:none}.dashboard-grid{grid-template-columns:1fr}.content-card{padding:18px}.timeline{grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}.timeline button{font-size:10px;padding:8px 3px;min-height:65px}.timeline button span{font-size:9px}.facts{grid-template-columns:1fr}.hero{gap:12px}.page{padding:18px 0 35px}.report-stat{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="container topbar-inner">
+  <div class="brand"><span class="brand-mark" aria-hidden="true">⚖</span><div>PENDIDIKAN PANCASILA · XI<br><small>Belajar mandiri — Dinamika UUD di Indonesia</small></div></div>
+  <button id="topExit" class="outline small-btn hidden" type="button">Ganti pengguna</button>
+</div></header>
+<main class="page container">
+<section id="loginView" class="hero">
+  <div class="card intro-card"><div class="eyebrow">Pembelajaran daring · Fase F</div><h1>Jejak Konstitusi Indonesia</h1><p>Telusuri bagaimana UUD berubah dan bagaimana perubahan tersebut memengaruhi bentuk negara, sistem pemerintahan, serta kedudukan lembaga negara.</p><p style="font-size:13px;margin-top:15px">Pelajari • Bandingkan • Analisis • Refleksikan</p></div>
+  <div class="card form-card"><div class="eyebrow">Identitas peserta didik</div><h2>Masuk ke kelas</h2><p class="muted">Pilih kelas, kemudian pilih nama yang telah disiapkan guru.</p>
+    <form id="loginForm">
+      <div class="field"><label for="kelas">Pilih kelas</label><select id="kelas" required><option value="">— Pilih kelas —</option><option>XI AK</option><option>XI DKV 1</option><option>XI DKV 2</option><option>XI TSM</option></select></div>
+      <div class="field"><label for="nama">Pilih nama</label><select id="nama" required disabled><option value="">— Pilih kelas terlebih dahulu —</option></select></div>
+      <div id="missingList" class="warn hidden">Daftar nama untuk kelas ini belum tersedia. Silakan hubungi guru.</div>
+      <button id="loginBtn" class="primary full" type="submit" disabled>Masuk dan mulai belajar →</button>
+    </form>
+    <p class="hint">Pilih namamu sendiri. Pilihan nama adalah identifikasi sederhana, bukan verifikasi identitas dengan kata sandi. Data akan dikirim ke Google Sheets jika koneksi aktif.</p>
+  </div>
+</section>
+<section id="dashboardView" class="hidden">
+ <div class="section-heading"><div class="eyebrow">Dashboard pembelajaran mandiri</div><h1 id="greeting">Selamat datang!</h1><p>Tujuan pembelajaran: menganalisis dinamika pemberlakuan Undang-Undang Dasar di Indonesia dan perubahan ketatanegaraan pada setiap periode.</p></div>
+ <div class="metadata"><span id="kelasChip" class="chip">Kelas</span><span id="modeChip" class="chip">Belajar mandiri</span><span class="chip">Estimasi belajar: 90 menit</span></div>
+ <div class="card"><div class="progress-label"><strong>Progres pembelajaran</strong><strong id="progressPercent">0%</strong></div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><p class="hint" style="margin-bottom:0">Tahapan berikutnya terbuka setelah aktivitas sebelumnya diselesaikan. Materi yang sudah dibaca dapat dibuka kembali.</p></div>
+ <div class="dashboard-grid" id="stageGrid"></div>
+ <div id="completeBanner" class="report hidden" style="margin-top:18px"><h3>Pembelajaran selesai</h3><p id="completeMsg">Semua aktivitas telah diselesaikan.</p><div class="btn-row"><button class="primary" id="downloadFromDash" type="button">Unduh bukti belajar (.json)</button></div></div>
+ <div class="banner" id="syncBanner"><strong>Status Google Sheets:</strong> <span id="syncStatus" role="status">Memeriksa koneksi…</span><div class="btn-row"><button type="button" class="outline" id="retrySync">Kirim / periksa ulang</button></div><small>Progres tetap disimpan di browser. Jangan menghapus data browser sebelum muncul konfirmasi tersimpan di Google Sheets.</small></div>
+</section>
+<section id="learnView" class="hidden">
+ <div class="section-heading"><div class="eyebrow" id="stageTag">Tahap pembelajaran</div><h1 id="stageHeading">Materi</h1><p id="stageLead">Ikuti petunjuk dan selesaikan aktivitas.</p></div>
+ <div class="stage-layout"><nav class="sidebar" id="stageNav" aria-label="Navigasi tahapan"><h3>TAHAP BELAJAR</h3></nav><article class="card content-card" id="stageContent" aria-live="polite"></article></div>
+ <div class="btn-row"><button id="backDashboard" class="outline" type="button">← Kembali ke dashboard</button></div>
+</section>
+</main>
+<footer class="footer-note container">Pendidikan Pancasila Fase F · Pembelajaran mandiri berbasis analisis konstitusi · Tidak memerlukan instalasi aplikasi</footer>
+<script>
+"use strict";
+// ============================================================================
+// DAFTAR SISWA DARI FILE YANG DIKIRIM — TERISI UNTUK EMPAT KELAS.
+// Jangan letakkan data rahasia, NISN, nomor telepon, atau PIN di GitHub publik.
+// ============================================================================
+const DAFTAR_SISWA = {
+  "XI AK": [
+    "ASMAUL HUSNA",
+    "DANI KRISNAWATI",
+    "DITAH SASMILAH",
+    "DWI JASMINE PUTRI MENTARI",
+    "FITA FIRZA",
+    "FITRI YANTI",
+    "LISA NURFADILAH",
+    "MARATUS SOLEHA",
+    "MARDIANA",
+    "MARWA SARI",
+    "MIRDA",
+    "MUSDALIFA",
+    "MUTIARA ALIFAH",
+    "NABILA ADWITIA RAMADANI",
+    "NUR AINI",
+    "NUR AZIZAH",
+    "RESTI WIJAYANTI",
+    "RISKA MUNASAFRIANI PUTRI",
+    "SITI MISRIANI"
+  ],
+  "XI DKV 1": [
+    "AMERTA MAULIANA",
+    "AURA SUPRAPTI",
+    "AZIZA AULI",
+    "DAMAR MAULANA",
+    "DHIKA REYHAN RENANDA",
+    "DINDA SINTIA RATU",
+    "DYSTY AYU WULANDARI",
+    "HANUNG BRAMANTYO",
+    "INDO SENNANG",
+    "INTAN FITRIYANTI",
+    "KAMILA REGINA PUTRI",
+    "M. HAYAT RIDHO",
+    "M. TAUFIQURRAHMAN",
+    "MUHAMMAD RIDHO",
+    "NOVIA CYTRA KHIRANA",
+    "NUR WAHID",
+    "RAFA ARI PRATAMA",
+    "RAMDITYA AL FAJRAN",
+    "REZA ZAKARIA",
+    "RIO FIRNANDA",
+    "SALSA BELLA OLIVIA",
+    "SARAH KARMELIA",
+    "SEPTI RAHMAWATI"
+  ],
+  "XI DKV 2": [
+    "AHMAD AFDAL MAULANA",
+    "ALFIAN FADIL",
+    "ALIF FARHAN RAIF",
+    "ANDREAN FERDIANSYAH",
+    "CHELSI CHOLIVA",
+    "DEVINZA INAYA",
+    "FADILAH APRILIA MINARNI",
+    "FEBYOLA ANNISA",
+    "M. ALIF PRATAMA",
+    "MELLYNDA",
+    "MUHAMMAD DANDI",
+    "MUHAMMAD ZIKRA FAUZAN ASIM",
+    "NADIA FEBRIANA",
+    "NILA OKTAVIANI",
+    "NISWATUN NAFI'AH",
+    "PUTRI NUR AULIYA",
+    "RAUDHATUL JANNAH",
+    "REGITA ANGGREANI",
+    "RIAN RAMA DHANI",
+    "RIYAN FAJARRUDIN",
+    "SAMSUL ADHARI",
+    "SYAVA ZAHRA RAMADANI",
+    "WAIS FATMAWATI"
+  ],
+  "XI TSM": [
+    "ADI PRAYOGA",
+    "AHMAD ALI TAQWIN",
+    "AHMAD DANI",
+    "AHMAD SAFRIYAN SAPUTRA",
+    "AIDIL SAPUTRA",
+    "ANDIKA",
+    "ANDIKA PERATAMA",
+    "ARIF RIFANDI",
+    "ARY SETYO KUNCORO",
+    "FAIZ ABDILLAH",
+    "FERDYANSAH",
+    "HAFIS MAHENDRA",
+    "IDRIANSYAH",
+    "M. SYAHRIL",
+    "M.RIYAL ALFAROZZI",
+    "MUHAMAD KAMIL",
+    "MUHAMMAD AKROM UL UMAM",
+    "MUHAMMAD HAYRIL",
+    "NADIF MAULANA NURDIN",
+    "MUHAMMAD RIZKI / PAREL PRATAMA",
+    "PUR YUDI SETIAWAN",
+    "RAHMAT ADYAKSA WAHED",
+    "RIDHO",
+    "RISKI ADITIA",
+    "RISQI SETIYO DWI RAHARTO",
+    "RUDI PEBRIANTO",
+    "RYKY SETIAWAN",
+    "SANDI MAULANA",
+    "M. YUDI / SYAFRIZAL",
+    "SYARIF ILHAM",
+    "WAHYU FIKRI ABDILLAH",
+    "WAYIM ASNURI",
+    "WIRA LASMAYUDA"
+  ]
+};
+
+const STAGES = [
+  {name:"Orientasi dan tujuan",sub:"Kenali arah pembelajaran dan aturan aktivitas"},
+  {name:"Pertanyaan pemantik",sub:"Hubungkan konstitusi dengan kehidupan bernegara"},
+  {name:"Lini masa konstitusi",sub:"Telusuri lima periode ketatanegaraan"},
+  {name:"Analisis perbandingan",sub:"Bandingkan sebab dan akibat perubahan"},
+  {name:"Kuis formatif",sub:"Kerjakan 10 soal penerapan dan analisis"},
+  {name:"Refleksi dan penutup",sub:"Simpulkan hasil belajar secara mandiri"}
+];
+const PERIODE = [
+  {tahun:"1945–1949",nama:"UUD 1945",tanggal:"18 Agustus 1945 – 27 Desember 1949",bentuk:"Negara kesatuan",sistem:"Presidensial menurut UUD; dalam praktik berkembang kabinet parlementer mulai November 1945",latar:"Setelah Proklamasi, PPKI menetapkan UUD 1945 sebagai hukum dasar negara. Situasi mempertahankan kemerdekaan memengaruhi praktik penyelenggaraan pemerintahan.",perubahan:"UUD 1945 menempatkan presiden sebagai pemegang kekuasaan pemerintahan. Praktik politik kemudian memberi kabinet peran yang bertanggung jawab secara politik kepada KNIP sebagai lembaga perwakilan sementara.",pikir:"Mengapa praktik ketatanegaraan dapat berubah meskipun teks konstitusi belum diganti?"},
+  {tahun:"1949–1950",nama:"Konstitusi RIS",tanggal:"27 Desember 1949 – 17 Agustus 1950",bentuk:"Negara federal (Republik Indonesia Serikat)",sistem:"Parlementer",latar:"Hasil Konferensi Meja Bundar dan pengakuan kedaulatan dalam bentuk Republik Indonesia Serikat membawa perubahan susunan negara.",perubahan:"Indonesia beralih dari bentuk kesatuan menjadi federal. Kekuasaan pemerintahan dijalankan melalui kabinet yang dipimpin perdana menteri dan bertanggung jawab kepada parlemen.",pikir:"Apa akibat politik dari perubahan bentuk negara kesatuan menjadi federal?"},
+  {tahun:"1950–1959",nama:"UUDS 1950",tanggal:"17 Agustus 1950 – 5 Juli 1959",bentuk:"Negara kesatuan",sistem:"Parlementer",latar:"Dorongan kembali ke negara kesatuan mengakhiri RIS. UUD Sementara 1950 mulai berlaku pada 17 Agustus 1950.",perubahan:"Bentuk negara kembali kesatuan, tetapi sistem parlementer tetap berlangsung. Pergantian kabinet yang sering terjadi dan kegagalan Konstituante menyusun UUD baru memicu krisis politik.",pikir:"Mengapa kembali ke negara kesatuan tidak otomatis mengakhiri ketidakstabilan kabinet?"},
+  {tahun:"1959–1999",nama:"UUD 1945 diberlakukan kembali",tanggal:"5 Juli 1959 – sebelum Perubahan Pertama 1999",bentuk:"Negara kesatuan",sistem:"Presidensial menurut UUD 1945; pelaksanaan kekuasaan berbeda antara Demokrasi Terpimpin dan Orde Baru",latar:"Dekrit Presiden 5 Juli 1959 memberlakukan kembali UUD 1945 setelah Konstituante tidak berhasil menetapkan UUD baru.",perubahan:"Secara formal sistem kembali merujuk UUD 1945. Dalam praktik, terjadi pemusatan kekuasaan serta lemahnya pembatasan kekuasaan eksekutif pada berbagai fase pemerintahan.",pikir:"Mengapa penerapan UUD yang sama dapat menghasilkan praktik kekuasaan yang berbeda?"},
+  {tahun:"1999–kini",nama:"UUD NRI 1945 hasil perubahan",tanggal:"Perubahan bertahap pada 1999, 2000, 2001, dan 2002; berlaku hingga kini",bentuk:"Negara kesatuan tetap dipertahankan",sistem:"Presidensial yang dipertegas dengan pembatasan kekuasaan dan penguatan checks and balances",latar:"Reformasi mendorong pembatasan kekuasaan, penguatan demokrasi, perlindungan HAM, dan penataan ulang hubungan antarlembaga negara.",perubahan:"Presiden dibatasi maksimal dua masa jabatan; presiden dipilih langsung; MPR tidak lagi menjadi lembaga tertinggi negara; dibentuk DPD, MK, dan KY; perlindungan HAM diperluas.",pikir:"Mengapa pembatasan masa jabatan dan penguatan pengawasan penting dalam negara demokratis?"}
+];
+const SOAL = [
+  {q:"Setelah berlakunya Konstitusi RIS, Indonesia berubah dari negara kesatuan menjadi federal. Perubahan yang paling langsung berkaitan dengan kondisi tersebut adalah …",a:["Kewenangan kenegaraan dibagi antara pemerintah federal dan negara bagian.","Semua kewenangan daerah dikembalikan kepada pemerintah pusat.","Kabinet dihapus agar presiden menjalankan seluruh pemerintahan sendiri.","Seluruh lembaga perwakilan digantikan oleh pemerintah daerah."],k:0,ulas:"Negara federal membagi kewenangan konstitusional antara pemerintah federal dan negara bagian."},
+  {q:"UUDS 1950 mengembalikan bentuk negara kesatuan, tetapi pergantian kabinet tetap sering terjadi. Penjelasan yang paling tepat adalah …",a:["Pergantian kabinet dipengaruhi hubungan dukungan politik dalam sistem parlementer.","Negara kesatuan mensyaratkan pergantian kabinet pada setiap tahun anggaran.","Bentuk negara kesatuan secara otomatis mengurangi peran parlemen.","Seluruh menteri dipilih langsung oleh pemilih dalam pemilihan umum."],k:0,ulas:"UUDS 1950 menganut sistem parlementer sehingga kelangsungan kabinet dipengaruhi dukungan politik di parlemen."},
+  {q:"Seorang murid menyatakan bahwa Dekrit Presiden 5 Juli 1959 membentuk konstitusi baru. Penilaian yang tepat terhadap pernyataan itu ialah …",a:["Tepat, sebab dekrit mengganti bentuk negara dengan federasi yang baru.","Tidak tepat, sebab dekrit memberlakukan kembali UUD 1945.","Tepat, sebab dekrit mengesahkan UUDS 1950 untuk kedua kalinya.","Tidak tepat, sebab setelah dekrit Indonesia tidak menggunakan konstitusi."],k:1,ulas:"Dekrit Presiden 5 Juli 1959 kembali memberlakukan UUD 1945, bukan membentuk konstitusi baru."},
+  {q:"Mengapa periode awal kemerdekaan penting dikaji dengan membedakan teks UUD dan praktik politik?",a:["Karena semua ketentuan hukum berhenti berlaku sejak Indonesia merdeka.","Karena lembaga politik tidak menjalankan fungsi apa pun pada masa perang.","Karena praktik kabinet berubah meskipun UUD 1945 belum diganti.","Karena Indonesia telah menerapkan konstitusi federal sejak Agustus 1945."],k:2,ulas:"Pada masa UUD 1945 awal, praktik kabinet parlementer berkembang meskipun teks konstitusinya belum diganti."},
+  {q:"Salah satu dampak perubahan UUD 1945 pada era Reformasi ialah kedudukan MPR tidak lagi sebagai lembaga tertinggi. Makna ketatanegaraannya adalah …",a:["MPR mengambil alih semua kewenangan pengawasan yudisial.","Seluruh keputusan pemerintah wajib disahkan oleh MPR.","Presiden berada di atas lembaga negara yang lain.","Kedaulatan dilaksanakan menurut UUD dengan hubungan lembaga yang dibatasi kewenangannya."],k:3,ulas:"Setelah perubahan, kedaulatan dilaksanakan menurut UUD dan MPR tidak lagi ditempatkan sebagai lembaga tertinggi negara."},
+  {q:"Seorang pemimpin mengusulkan jabatan presiden dapat diperpanjang tanpa batas karena pemerintahannya dianggap berhasil. Prinsip UUD NRI 1945 hasil perubahan yang relevan untuk menilai usulan itu adalah …",a:["Masa jabatan presiden dibatasi untuk mencegah kekuasaan berkepanjangan.","Perpanjangan jabatan dilakukan otomatis setelah mendapat dukungan kabinet.","Keberhasilan ekonomi dapat mengesampingkan batas masa jabatan.","Presiden dapat menetapkan sendiri masa jabatan melalui keputusan eksekutif."],k:0,ulas:"Pasal 7 UUD NRI Tahun 1945 membatasi masa jabatan presiden dan wakil presiden maksimal dua kali masa jabatan."},
+  {q:"Perhatikan urutan UUD 1945 → Konstitusi RIS → UUDS 1950. Simpulan yang paling tepat ialah …",a:["Indonesia terus menggunakan negara federal dengan perubahan kabinet saja.","Perubahan konstitusi selalu menghapus keberadaan badan perwakilan.","Perubahan mencakup bentuk negara dan pengaturan penyelenggaraan pemerintahan.","Seluruh periode menerapkan sistem presidensial tanpa perubahan praktik."],k:2,ulas:"Rangkaian itu menunjukkan perubahan bentuk negara kesatuan-federal-kesatuan dan pengaturan sistem pemerintahan."},
+  {q:"Jika dibandingkan dengan sebelum perubahan UUD 1945, keberadaan Mahkamah Konstitusi menunjukkan …",a:["Berpindahnya semua fungsi pembentukan undang-undang kepada pengadilan.","Adanya mekanisme pengujian undang-undang terhadap UUD oleh lembaga yudisial.","Berakhirnya kewenangan DPR untuk menyusun undang-undang bersama presiden.","Semua sengketa politik diselesaikan melalui pemilihan umum langsung."],k:1,ulas:"MK memiliki kewenangan antara lain menguji undang-undang terhadap UUD; ini memperkuat pengawasan konstitusional."},
+  {q:"Bagaimana empat tahap perubahan UUD 1945 pada 1999–2002 sebaiknya dipahami?",a:["Sebagai pergantian bentuk negara kesatuan menjadi negara federal.","Sebagai empat konstitusi negara baru yang berlaku bergantian.","Sebagai penghapusan Pembukaan UUD 1945 dan Pancasila.","Sebagai perubahan bertahap terhadap satu UUD tanpa mengganti NKRI."],k:3,ulas:"Perubahan 1999–2002 dilakukan bertahap terhadap UUD 1945 dan mempertahankan NKRI."},
+  {q:"Pelajaran utama dari dinamika pemberlakuan UUD di Indonesia bagi kehidupan demokrasi sekarang adalah …",a:["Memahami bahwa aturan dan praktik kekuasaan perlu dinilai berdasarkan prinsip konstitusi.","Menganggap pergantian konstitusi selalu menghasilkan sistem pemerintahan yang lebih baik.","Menetapkan bahwa seluruh kewenangan negara harus dipusatkan pada satu lembaga.","Menyimpulkan bahwa bentuk negara menentukan demokrasi tanpa faktor lain."],k:0,ulas:"Analisis ketatanegaraan harus membedakan ketentuan konstitusi, praktik pemerintahan, dan prinsip demokrasi."}
+];
+
+// 1) SETELAH deploy Apps Script, tempel URL Web App yang berakhir /exec berikut:
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyUFdlDpJnk4BOw-iimzowr-R1kZQrxhJ9hmMiwN8rH-DG533mIQbd1DL2MkjL5jeDK/exec"; // CONTOH: https://script.google.com/macros/s/AKfycb.../exec
+const $=id=>document.getElementById(id);
+let pengguna=null,preview=false,activeStage=0,currentPeriod=0;
+const newProgress=()=>({done:[false,false,false,false,false,false],pemantik:"",visited:[false,false,false,false,false],analisis:["",""],jawaban:Array(SOAL.length).fill(null),quizSubmitted:false,quizScore:null,refleksi:"",percaya:"",selesaiPada:null});
+let progress=newProgress();
+const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const studentKey=()=>pengguna && !preview ? `pancasilaXIv2_${pengguna.kelas}_${pengguna.nama}` : null;
+// --- KONEKSI GOOGLE SHEETS (reliable acknowledgement via receipt-only JSONP) ---
+const syncStorageKey=()=>studentKey()?studentKey()+'_pending':null;
+const syncTimeKey=()=>studentKey()?studentKey()+'_lastSync':null;
+const syncSnapshotKey=()=>studentKey()?studentKey()+'_confirmedState':null;
+let syncRunning=false;
+function requestId(){
+  if(window.crypto&&crypto.randomUUID)return crypto.randomUUID();
+  if(!window.crypto||!crypto.getRandomValues)throw Error('Browser tidak mendukung ID aman.');
+  const b=new Uint8Array(16);crypto.getRandomValues(b);b[6]=(b[6]&15)|64;b[8]=(b[8]&63)|128;
+  const h=Array.from(b,n=>n.toString(16).padStart(2,'0')).join('');
+  return h.slice(0,8)+'-'+h.slice(8,12)+'-'+h.slice(12,16)+'-'+h.slice(16,20)+'-'+h.slice(20);
+}
+function readyUrl(){return /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(GOOGLE_SCRIPT_URL.trim())}
+function statusSync(message){const el=$('syncStatus');if(el)el.textContent=message;}
+function renderSyncStatus(){
+  if(!pengguna||preview)return;
+  if(!readyUrl()){statusSync('Belum diaktifkan guru. Progres tersimpan pada perangkat ini.');return;}
+  if(syncRunning){statusSync('Mengirim dan memverifikasi data…');return;}
+  const pending=localStorage.getItem(syncStorageKey());
+  const time=localStorage.getItem(syncTimeKey());
+  if(pending)statusSync('Belum terkonfirmasi. Tekan “Kirim / periksa ulang” saat internet tersedia.');
+  else if(time){
+    const same=localStorage.getItem(syncSnapshotKey())===JSON.stringify(progress);
+    statusSync(same?'Tersimpan di Google Sheets — dikonfirmasi pada '+new Date(time).toLocaleString('id-ID')+'.':'Ada perubahan lokal yang belum dikirim. Tekan “Kirim / periksa ulang”.');
+  }
+  else statusSync('Belum pernah disinkronkan. Tekan tombol untuk mengirim.');
+}
+function queueSync(){
+  if(preview||!pengguna||!readyUrl())return;
+  try{
+    const data={version:1,rid:requestId(),kelas:pengguna.kelas,nama:pengguna.nama,progress:JSON.parse(JSON.stringify(progress))};
+    localStorage.setItem(syncStorageKey(),JSON.stringify(data));
+    syncPending();
+  }catch(e){console.error('Gagal menyiapkan sinkronisasi:',e);renderSyncStatus();}
+}
+function checkReceipt(rid){
+  return new Promise(resolve=>{
+    const cb='pancasilaCb'+rid.replace(/-/g,'');let finished=false;
+    const script=document.createElement('script');
+    const complete=saved=>{if(finished)return;finished=true;clearTimeout(timer);script.remove();delete window[cb];resolve(!!saved)};
+    window[cb]=value=>complete(value&&value.saved===true);
+    script.onerror=()=>complete(false);
+    const timer=setTimeout(()=>complete(false),10000);
+    script.src=GOOGLE_SCRIPT_URL+'?action=receipt&rid='+encodeURIComponent(rid)+'&callback='+cb+'&v='+Date.now();
+    document.head.append(script);
+  });
+}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function syncPending(){
+  if(syncRunning||!readyUrl()||!pengguna||preview)return;
+  const ownerKey=studentKey(),pendingKey=ownerKey+'_pending',timeKey=ownerKey+'_lastSync',snapshotKey=ownerKey+'_confirmedState';
+  syncRunning=true;renderSyncStatus();
+  try{
+    for(let round=0;round<20;round++){
+      const raw=localStorage.getItem(pendingKey);if(!raw)break;
+      const payload=JSON.parse(raw);
+      // Browser tidak dapat membaca respons POST lintas-domain (no-cors).
+      // Karena itu sukses HANYA ditentukan oleh tanda terima yang diperiksa terpisah.
+      let verified=await checkReceipt(payload.rid);
+      if(!verified){
+        try{
+          await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',redirect:'follow',headers:{'Content-Type':'text/plain;charset=utf-8'},body:raw});
+        }catch(e){console.warn('Pengiriman gagal:',e);}
+        for(let n=0;n<4&&!verified;n++){await sleep(1300);verified=await checkReceipt(payload.rid);}
+      }
+      if(!verified)break;
+      // Jangan menghapus perubahan yang dibuat sementara pengiriman sebelumnya berjalan.
+      const latest=localStorage.getItem(pendingKey);
+      if(latest&&JSON.parse(latest).rid===payload.rid){
+        localStorage.removeItem(pendingKey);
+        localStorage.setItem(timeKey,new Date().toISOString());
+        localStorage.setItem(snapshotKey,JSON.stringify(payload.progress));
+      }
+    }
+  }catch(e){console.warn('Sinkronisasi belum berhasil:',e);}
+  finally{
+    syncRunning=false;renderSyncStatus();
+    // Perubahan pengguna selama permintaan berlangsung tidak boleh menimpa data pengguna lain.
+    if(studentKey()&&studentKey()!==ownerKey&&localStorage.getItem(syncStorageKey()))syncPending();
+  }
+}
+$('retrySync').addEventListener('click',()=>{
+  if(!readyUrl()){renderSyncStatus();return;}
+  if(!localStorage.getItem(syncStorageKey()))queueSync();else syncPending();
+});
+window.addEventListener('online',()=>{if(pengguna&&!preview)syncPending()});
+// --- AKHIR KONEKSI ---
+
+function save(){if(!preview && studentKey())localStorage.setItem(studentKey(),JSON.stringify(progress));}
+function load(){progress=newProgress();if(preview)return;try{const s=JSON.parse(localStorage.getItem(studentKey())||'null');if(s){progress={...progress,...s};if(!Array.isArray(progress.done)||progress.done.length!==6)progress.done=Array(6).fill(false);if(!Array.isArray(progress.visited)||progress.visited.length!==5)progress.visited=Array(5).fill(false);if(!Array.isArray(progress.jawaban)||progress.jawaban.length!==SOAL.length)progress.jawaban=Array(SOAL.length).fill(null);}}catch{progress=newProgress()}}
+function show(which){['loginView','dashboardView','learnView'].forEach(id=>$(id).classList.toggle('hidden',id!==which));$('topExit').classList.toggle('hidden',which==='loginView');window.scrollTo({top:0,behavior:'instant'});}
+function names(){const cl=$('kelas').value,sel=$('nama');sel.replaceChildren(new Option(cl?'— Pilih nama —':'— Pilih kelas terlebih dahulu —',''));const arr=[...new Set((DAFTAR_SISWA[cl]||[]).map(v=>String(v).trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'id'));arr.forEach(n=>sel.add(new Option(n,n)));sel.disabled=arr.length===0;$('missingList').classList.toggle('hidden',!cl||arr.length>0);$('loginBtn').disabled=true}
+$('kelas').addEventListener('change',names);$('nama').addEventListener('change',()=>$('loginBtn').disabled=!$('nama').value);
+$('loginForm').addEventListener('submit',event=>{event.preventDefault();const cl=$('kelas').value,n=$('nama').value;if(!(DAFTAR_SISWA[cl]||[]).includes(n))return;pengguna={kelas:cl,nama:n};preview=false;sessionStorage.setItem('pancasilaXI_session',JSON.stringify(pengguna));load();dashboard();queueSync()});
+
+function logout(){pengguna=null;preview=false;sessionStorage.removeItem('pancasilaXI_session');show('loginView')}
+$('topExit').addEventListener('click',logout);
+function openStage(index){if(index>0&&!progress.done[index-1]&&!preview)return;activeStage=index;renderStage();show('learnView')}
+function finish(index){progress.done[index]=true;if(index===5)progress.selesaiPada=new Date().toISOString();save();dashboard();queueSync();}
+function dashboard(){
+ $('greeting').textContent=preview?'Pratinjau pembelajaran':`Selamat belajar, ${pengguna.nama}!`;
+ $('kelasChip').textContent=pengguna.kelas;$('modeChip').textContent=preview?'Pratinjau — data tidak disimpan':'Progres lokal + sinkronisasi';
+ const done=progress.done.filter(Boolean).length,percent=Math.round(done/6*100);
+ $('progressPercent').textContent=percent+'%';$('progressFill').style.width=percent+'%';
+ $('stageGrid').replaceChildren(...STAGES.map((st,i)=>{
+  const ok=progress.done[i],locked=i>0&&!progress.done[i-1]&&!preview,btn=document.createElement('button');btn.type='button';btn.className='stage-tile '+(ok?'is-done ':'')+(locked?'is-locked':'');btn.disabled=locked;
+  const num=document.createElement('span');num.className='step-num';num.textContent=ok?'✓':String(i+1).padStart(2,'0');
+  const txt=document.createElement('span');const b=document.createElement('b');b.textContent=st.name;const small=document.createElement('small');small.textContent=st.sub;txt.append(b,small);
+  const status=document.createElement('span');status.className='status';status.textContent=ok?'Selesai':locked?'Terkunci':'Buka →';btn.append(num,txt,status);btn.addEventListener('click',()=>openStage(i));return btn;
+ }));
+ $('completeBanner').classList.toggle('hidden',!progress.done.every(Boolean));
+ if(progress.done.every(Boolean))$('completeMsg').textContent=`${pengguna.nama} telah menyelesaikan enam tahap. Nilai kuis: ${progress.quizScore??'—'}/100. Periksa status pengiriman Google Sheets di bagian bawah dashboard.`;
+ show('dashboardView');renderSyncStatus();
+}
+function nav(){const parent=$('stageNav');parent.replaceChildren();const h=document.createElement('h3');h.textContent='TAHAP BELAJAR';parent.append(h);STAGES.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.className='side-link '+(i===activeStage?'active':'');b.disabled=i>0&&!progress.done[i-1]&&!preview;b.innerHTML=`<span class="mini">${progress.done[i]?'✓':i+1}</span><span>${escapeHTML(s.name)}</span>`;b.addEventListener('click',()=>openStage(i));parent.append(b)})}
+function renderStage(){nav();$('stageTag').textContent=`Tahap ${activeStage+1} dari 6`;$('stageHeading').textContent=STAGES[activeStage].name;$('stageLead').textContent=STAGES[activeStage].sub;
+ const html=[orientasi,pemantik,materi,analisis,quiz,refleksi][activeStage]();$('stageContent').innerHTML=html;bindStage()}
+function bottomButton(label,disabled=false){return `<div class="btn-row"><button class="primary" id="completeStage" type="button" ${disabled?'disabled':''}>${label} →</button><button class="outline" id="gotoDash" type="button">Kembali ke dashboard</button></div>`}
+function orientasi(){return `<span class="pill">ORIENTASI</span><h2>Apa yang akan kita pelajari?</h2>
+<p>Konstitusi merupakan hukum dasar negara. Dinamika pemberlakuannya di Indonesia menunjukkan bahwa perubahan politik dapat memengaruhi <strong>bentuk negara</strong>, <strong>sistem pemerintahan</strong>, dan <strong>hubungan antarlembaga negara</strong>.</p>
+<div class="callout"><strong>Tujuan pembelajaran:</strong><br>Peserta didik mampu menganalisis dinamika pemberlakuan Undang-Undang Dasar di Indonesia serta perubahan ketatanegaraan yang terjadi pada setiap periode pemberlakuannya.</div>
+<h3>Target setelah belajar</h3><ol class="list-plain"><li>Mengurutkan periode pemberlakuan konstitusi secara tepat.</li><li>Membedakan perubahan bentuk negara dan sistem pemerintahan.</li><li>Menjelaskan hubungan sebab-akibat perubahan ketatanegaraan.</li><li>Menilai pentingnya pembatasan kekuasaan menurut UUD NRI Tahun 1945.</li></ol>
+<h3>Petunjuk belajar mandiri</h3><p>Kerjakan tahapan secara berurutan. Baca sumber singkat, pelajari lini masa, kemudian tulis analisis menggunakan kalimat sendiri. Anda boleh membuka kembali materi saat menjawab.</p>
+<div class="note">Estimasi total: ±90 menit. Pengerjaan tersimpan pada browser perangkat yang sama. Jika menggunakan perangkat bersama, keluar dari akun setelah belajar.</div>
+${bottomButton(progress.done[0]?'Buka tahap selanjutnya':'Saya memahami tujuan pembelajaran')}</p>`}
+function pemantik(){return `<span class="pill">PEMANTIK</span><h2>Apakah konstitusi boleh berubah?</h2><p>Bayangkan suatu negara memiliki undang-undang dasar yang masih berlaku, tetapi praktik pemerintahan tidak sesuai dengan harapan rakyat. Ada kelompok yang mengusulkan perubahan aturan dasar agar kekuasaan tidak terkonsentrasi pada satu lembaga.</p>
+<div class="task"><h3>Pertanyaan awal</h3><label for="pemantikAnswer">Menurut pendapatmu, mengapa aturan dasar negara terkadang perlu diubah? Jelaskan alasanmu dan berikan satu contoh keadaan yang dapat mendorong perubahan.</label><textarea id="pemantikAnswer" maxlength="1500" placeholder="Tulis jawaban menggunakan pemahamanmu sendiri...">${escapeHTML(progress.pemantik)}</textarea><div class="tiny-counter" id="pemantikCount"></div></div>
+<div class="note">Tidak ada satu jawaban baku untuk pemantik. Guru akan menilai kelogisan alasan, bukan hanya panjangnya jawaban. Minimal 25 karakter.</div><p class="error hidden" id="pemantikError">Tuliskan jawaban paling sedikit 25 karakter.</p>
+${bottomButton('Simpan jawaban dan lanjut')}`}
+function materi(){return `<span class="pill">EKSPLORASI MATERI</span><h2>Lini masa perjalanan konstitusi</h2><p>Indonesia pernah memberlakukan UUD 1945, Konstitusi RIS, dan UUDS 1950. UUD 1945 kemudian diberlakukan kembali dan mengalami empat tahap perubahan pada 1999–2002. <strong>Lima kartu di bawah adalah pembagian periode kajian, bukan lima konstitusi yang berbeda.</strong></p>
+<div class="timeline" role="group" aria-label="Pilih periode konstitusi">${PERIODE.map((p,i)=>`<button type="button" class="${i===currentPeriod?'active':''}" data-period="${i}">${i+1}<span>${p.tahun}</span></button>`).join('')}</div>
+<div id="periodInfo"></div><div class="callout"><strong>Bandingkan:</strong> manakah perubahan yang berkaitan dengan <em>bentuk negara</em> dan manakah yang berkaitan dengan <em>sistem pemerintahan</em>? Perhatikan perbedaannya sebelum melanjutkan.</div>
+<div id="visitedText" class="visit-line"></div><div class="note">Buka kelima periode terlebih dahulu sebelum melanjutkan ke tugas analisis.</div>${bottomButton('Saya sudah mempelajari kelima periode',!progress.visited.every(Boolean))}`}
+function periodCard(){const p=PERIODE[currentPeriod];return `<div class="period-sheet"><div class="eyebrow">PERIODE ${currentPeriod+1} · ${escapeHTML(p.tahun)}</div><h3>${escapeHTML(p.nama)}</h3><div class="hint">${escapeHTML(p.tanggal)}</div>
+<div class="facts" style="margin-top:14px"><div class="fact"><small>Bentuk negara</small><b>${escapeHTML(p.bentuk)}</b></div><div class="fact"><small>Sistem / praktik pemerintahan</small><b>${escapeHTML(p.sistem)}</b></div></div>
+<div class="panel-line"></div><strong>Latar belakang</strong><p>${escapeHTML(p.latar)}</p><strong>Perubahan ketatanegaraan</strong><p>${escapeHTML(p.perubahan)}</p><div class="callout"><strong>Pertanyaan analisis:</strong> ${escapeHTML(p.pikir)}</div></div>`}
+function showPeriod(){progress.visited[currentPeriod]=true;save();$('periodInfo').innerHTML=periodCard();document.querySelectorAll('[data-period]').forEach(b=>b.classList.toggle('active',Number(b.dataset.period)===currentPeriod));$('visitedText').textContent=`${progress.visited.filter(Boolean).length} dari 5 periode telah dibuka`;$('completeStage').disabled=!progress.visited.every(Boolean)}
+function analisis(){const tasks=[{title:'Analisis 1 — Konstitusi RIS dan UUDS 1950',q:'Ketika Indonesia beralih dari Konstitusi RIS 1949 ke UUDS 1950, perubahan apa yang terjadi pada bentuk negara? Mengapa sistem pemerintahan parlementer tetap dapat berlangsung? Jelaskan dua akibat perubahan tersebut.'},{title:'Analisis 2 — Ketatanegaraan sebelum dan sesudah Reformasi',q:'Bandingkan kedudukan MPR dan pembatasan masa jabatan presiden sebelum dan setelah perubahan UUD 1945. Jelaskan mengapa perubahan tersebut penting untuk mencegah pemusatan kekuasaan.'}];return `<span class="pill">ANALISIS C4</span><h2>Bandingkan, jelaskan, dan simpulkan</h2><p>Gunakan fakta dari lini masa. Jawaban harus menunjukkan <strong>perbedaan</strong> serta <strong>sebab atau akibatnya</strong>. Tulis dengan kalimat sendiri, tidak cukup menyebut tanggal.</p>
+${tasks.map((t,i)=>`<div class="task"><h3>${t.title}</h3><p>${t.q}</p><label for="analysis${i}">Jawaban analisis ${i+1}</label><textarea id="analysis${i}" maxlength="4000" placeholder="Tuliskan analisis dengan alasan dan fakta pendukung...">${escapeHTML(progress.analisis[i]||'')}</textarea><div class="tiny-counter" id="analysisCount${i}"></div></div>`).join('')}
+<div class="note">Minimal 100 karakter tiap jawaban untuk mencegah jawaban terlalu singkat. Panjang bukan penentu kualitas; guru tetap perlu memeriksa argumen.</div><p class="error hidden" id="analisisError">Lengkapi kedua jawaban, masing-masing minimal 100 karakter.</p>${bottomButton('Simpan kedua analisis dan lanjut')}`}
+function quiz(){return `<span class="pill">ASESMEN FORMATIF</span><h2>Uji kemampuan analisis</h2><p>Jawablah 10 soal. Pilih jawaban yang paling sesuai dengan fakta dan prinsip konstitusi. Skor pilihan ganda dihitung otomatis; tugas analisis tetap perlu penilaian guru.</p>
+${SOAL.map((s,i)=>`<div class="quiz-item"><div class="question">${i+1}. ${escapeHTML(s.q)}</div><div style="margin-top:12px">${s.a.map((option,j)=>`<label class="option"><input type="radio" name="soal${i}" value="${j}" ${progress.jawaban[i]===j?'checked':''} ${progress.quizSubmitted?'disabled':''}><span>${String.fromCharCode(65+j)}. ${escapeHTML(option)}</span></label>`).join('')}</div>${progress.quizSubmitted?`<div class="feedback"><strong>${progress.jawaban[i]===s.k?'Benar':'Belum tepat'}.</strong> ${escapeHTML(s.ulas)} Jawaban: ${String.fromCharCode(65+s.k)}.</div>`:''}</div>`).join('')}
+${progress.quizSubmitted?`<div class="report"><h3>Hasil kuis formatif</h3><div class="score">${progress.quizScore}/100</div><p>Skor menunjukkan capaian pilihan ganda saja dan tidak menggantikan penilaian tugas analisis.</p></div>`:`<div class="note" id="quizCount">Terjawab: ${progress.jawaban.filter(v=>v!==null).length} / 10</div><p class="error hidden" id="quizError">Jawab semua 10 soal sebelum mengirim.</p>`}
+${bottomButton(progress.quizSubmitted?'Lanjut ke refleksi':'Kirim jawaban dan lihat skor',!progress.quizSubmitted&&progress.jawaban.some(v=>v===null))}`}
+function refleksi(){if(progress.done[5])return `<span class="pill">PENUTUP</span><h2>Pembelajaran telah selesai</h2><p>Seluruh tahapan pembelajaran berhasil dikerjakan. Kamu dapat mengunduh bukti belajar yang berisi identitas, jawaban, dan nilai kuis dari perangkat ini.</p><div class="report"><h3>Ringkasan capaian</h3><div class="report-stat"><div><b>6 dari 6</b><small>Tahap selesai</small></div><div><b>${progress.quizScore??'—'}/100</b><small>Skor kuis formatif</small></div></div><button type="button" class="primary" id="downloadLearn">Unduh bukti belajar (.json)</button></div><div class="banner">Unduhan bukti belajar berbeda dari konfirmasi Google Sheets. Periksa status sinkronisasi pada dashboard.</div>`;
+return `<span class="pill">REFLEKSI</span><h2>Apa yang kamu pahami?</h2><p>Refleksi membantu kamu menyimpulkan pelajaran dan membantu guru mengetahui bagian yang masih perlu dibahas.</p>
+<div class="task"><label for="refleksiAnswer">Menurutmu, perubahan ketatanegaraan manakah yang paling penting bagi demokrasi Indonesia saat ini? Jelaskan dengan satu alasan berdasarkan materi.</label><textarea id="refleksiAnswer" maxlength="2500" placeholder="Tuliskan simpulan dan alasan...">${escapeHTML(progress.refleksi)}</textarea><div class="tiny-counter" id="refleksiCount"></div></div>
+<div class="field"><label for="confidence">Seberapa yakin kamu memahami dinamika konstitusi Indonesia?</label><select id="confidence"><option value="">— Pilih tingkat pemahaman —</option><option value="1" ${progress.percaya==='1'?'selected':''}>1 — Masih perlu banyak bantuan</option><option value="2" ${progress.percaya==='2'?'selected':''}>2 — Memahami sebagian</option><option value="3" ${progress.percaya==='3'?'selected':''}>3 — Cukup memahami</option><option value="4" ${progress.percaya==='4'?'selected':''}>4 — Dapat menjelaskan dengan baik</option></select></div>
+<div class="note">Minimal 60 karakter, sertakan alasan. Guru dapat menggunakan refleksi untuk tindak lanjut pembelajaran.</div><p class="error hidden" id="refleksiError">Lengkapi refleksi minimal 60 karakter dan pilih tingkat pemahaman.</p>
+${bottomButton('Selesaikan pembelajaran')}`}
+function bindStage(){const dash=$('gotoDash');if(dash)dash.addEventListener('click',dashboard);
+ const btn=$('completeStage');if(!btn){const dl=$('downloadLearn');if(dl)dl.addEventListener('click',downloadReport);return}
+ if(activeStage===0){btn.addEventListener('click',()=>finish(0));}
+ if(activeStage===1){const el=$('pemantikAnswer'),count=$('pemantikCount');const change=()=>{progress.pemantik=el.value;count.textContent=`${el.value.trim().length} karakter`;save()};el.addEventListener('input',change);change();btn.addEventListener('click',()=>{if(el.value.trim().length<25){$('pemantikError').classList.remove('hidden');return}finish(1)})}
+ if(activeStage===2){document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>{currentPeriod=Number(b.dataset.period);showPeriod()}));showPeriod();btn.addEventListener('click',()=>{if(progress.visited.every(Boolean))finish(2)})}
+ if(activeStage===3){[0,1].forEach(i=>{const el=$(`analysis${i}`),count=$(`analysisCount${i}`);const change=()=>{progress.analisis[i]=el.value;count.textContent=`${el.value.trim().length} karakter`;save()};el.addEventListener('input',change);change()});btn.addEventListener('click',()=>{if(progress.analisis.some(s=>(s||'').trim().length<100)){$('analisisError').classList.remove('hidden');return}finish(3)})}
+ if(activeStage===4){if(!progress.quizSubmitted){document.querySelectorAll('input[type="radio"]').forEach(r=>r.addEventListener('change',()=>{const i=Number(r.name.replace('soal',''));progress.jawaban[i]=Number(r.value);save();$('quizCount').textContent=`Terjawab: ${progress.jawaban.filter(v=>v!==null).length} / 10`;btn.disabled=progress.jawaban.some(v=>v===null)}));btn.addEventListener('click',()=>{if(progress.jawaban.some(v=>v===null)){$('quizError').classList.remove('hidden');return}progress.quizScore=SOAL.reduce((s,q,i)=>s+(q.k===progress.jawaban[i]?10:0),0);progress.quizSubmitted=true;progress.done[4]=true;save();queueSync();renderStage();window.scrollTo({top:0,behavior:'instant'})})}else btn.addEventListener('click',dashboard)}
+ if(activeStage===5){const el=$('refleksiAnswer'),count=$('refleksiCount'),select=$('confidence');const change=()=>{progress.refleksi=el.value;progress.percaya=select.value;count.textContent=`${el.value.trim().length} karakter`;save()};el.addEventListener('input',change);select.addEventListener('change',change);change();btn.addEventListener('click',()=>{if(el.value.trim().length<60||!select.value){$('refleksiError').classList.remove('hidden');return}finish(5)})}
+}
+$('backDashboard').addEventListener('click',dashboard);
+function downloadReport(){if(preview){alert('Pratinjau guru tidak menyimpan hasil. Masuk dengan identitas murid untuk mencoba pengunduhan.');return}const output={aplikasi:'Belajar Mandiri Pendidikan Pancasila XI',status:(!localStorage.getItem(syncStorageKey())&&localStorage.getItem(syncTimeKey())&&localStorage.getItem(syncSnapshotKey())===JSON.stringify(progress))?'GOOGLE_SHEETS_TERVERIFIKASI':'TERSIMPAN_LOKAL_BELUM_TERVERIFIKASI',dibuat_pada:new Date().toISOString(),siswa:pengguna,progres:progress,pertanyaan:{pemantik:'Mengapa aturan dasar negara terkadang perlu diubah?',analisis:['Perubahan RIS ke UUDS 1950','MPR dan masa jabatan presiden sebelum/sesudah perubahan UUD 1945'],refleksi:'Perubahan ketatanegaraan paling penting dan alasannya'}};const blob=new Blob([JSON.stringify(output,null,2)],{type:'application/json;charset=utf-8'}),link=document.createElement('a'),url=URL.createObjectURL(blob);link.href=url;link.download=`hasil-pancasila-${pengguna.kelas.replace(/\s+/g,'-')}-${pengguna.nama.replace(/[^a-z0-9-]+/gi,'-')}.json`;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+$('downloadFromDash').addEventListener('click',downloadReport);
+try{const old=JSON.parse(sessionStorage.getItem('pancasilaXI_session')||'null');if(old&&(DAFTAR_SISWA[old.kelas]||[]).includes(old.nama)){pengguna=old;preview=false;load();dashboard();if(localStorage.getItem(syncStorageKey()))syncPending()}}catch{sessionStorage.removeItem('pancasilaXI_session')}
+</script>
+</body>
+</html>
